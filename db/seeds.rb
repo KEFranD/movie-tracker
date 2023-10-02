@@ -20,22 +20,21 @@ def movies_dataset
   begin
     api_data = { key: api_key }
     movies_response = RestClient.get("https://api.themoviedb.org/3/movie/top_rated?api_key=#{ENV['TMDB_API']}&page=1']}")
-    movies_data = JSON.parse(movies_response)["results"]
+    movies_data = JSON.parse(movies_response)['results']
 
     if movies_data.present?
       movies_data.first(10).each do |movie|
-      Movie.create(
-        name: movie["title"],
-        description: movie["overview"],
-        poster_url: movie["poster_path"],
-        rating: movie["vote_average"]
-      )
-      puts "Seeding Movie Data: #{movie["title"]}"
+        Movie.create(
+          name: movie['title'],
+          description: movie['overview'],
+          poster_url: movie['poster_path'],
+          rating: movie['vote_average']
+        )
+        puts "Seeding Movie Data: #{movie['title']}"
       end
     else
-      puts "No movie data found in the API response"
+      puts 'No movie data found in the API response'
     end
-
   rescue RestClient::ExceptionWithResponse => e
     puts "Error: #{e.response}"
   rescue StandardError => e
@@ -43,4 +42,4 @@ def movies_dataset
   end
 end
 
-movies_dataset()
+movies_dataset
