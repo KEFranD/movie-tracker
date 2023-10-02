@@ -9,6 +9,8 @@ require 'rest-client'
 require 'json'
 
 Movie.destroy_all
+Bookmark.destroy_all
+List.destroy_all
 
 puts 'Getting Movies Data'
 
