@@ -1,2 +1,6 @@
 <h1>List Show</h1>
 <p><%=@list.name %></p>
+<%= link_to "Delete",
+  list_path(@list),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>

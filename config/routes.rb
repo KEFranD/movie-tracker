@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   get '/lists/new', to: 'lists#new'
   post '/lists', to: 'lists#create'
   get 'lists/:id', to: 'lists#show', as: :list
+  get 'lists/:id/edit', to: 'lists#edit', as: :edit
+  patch 'lists/:id', to: 'lists#update'
+  delete 'lists/:id', to: 'lists#destroy'
 end
