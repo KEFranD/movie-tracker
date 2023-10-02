@@ -1,6 +1,20 @@
-<h1>List Show</h1>
-<p><%=@list.name %></p>
+<h1>Your <%=@list.name %> Movies List</h1>
+
 <%= link_to "Delete",
   list_path(@list),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
 %>
+
+<h3>Movies:</h3>
+<ul class="list-group">
+  <% @list.movies.each do |movie| %>
+  <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+    <%= image_tag movie.poster_url, class: "movie-img rounded-top"%>
+    <li class="list-group-item"><%= movie.name %></li>
+    <li class="list-group-item"><%= movie.description %></li>
+    <li class="list-group-item"><%= movie.rating %></li>
+    <p><strong>Note:</strong></p>
+    <li class="list-group-item"><%= bookmark.note %></li>
+  <% end %>
+</ul>
+<br>
