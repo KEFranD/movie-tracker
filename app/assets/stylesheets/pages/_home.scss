@@ -1,4 +1,85 @@
 // Specific CSS for your home-page
+body, html {
+  min-height: 100%;
+  line-height: 1.8;
+}
+
+/* Mobile-first approach: Define styles for smaller screens first */
 h1 {
-  color: black;
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 10px;
+}
+
+.home-container {
+  background-position: center;
+  background-size: cover;
+  background-color: #EDF2F4;
+  padding-bottom: 30px;
+  height: 650px;
+}
+
+.home-contents {
+  padding: 1.5em; /* Use relative units for padding */
+  margin-bottom: 3.5em; /* Use relative units for margin */
+
+  h1, h3 {
+    font-family: 'Lilita One', cursive;
+    color: rgb(40, 40, 40);
+  }
+
+  h1 {
+    font-size: 3.5em; /* Use relative units for font size */
+  }
+
+  h3 {
+    font-size: 1.50em; /* Use relative units for font size */
+  }
+}
+
+span.movie {
+  color: #EF233C;
+}
+
+.home-img {
+  width: 6em; /* Use relative units for width */
+}
+
+.home--btn {
+  background-color: #EF233C;
+  border: none;
+  color: white;
+  padding: 0.75em 2em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  border-radius: 2em;
+  font-weight: 500;
+  font-family: 'Lilita One', cursive;
+  margin-top: -3.5em; /* Use relative units for margin */
+  margin-left: 1em; /* Use relative units for margin */
+
+  &:hover {
+    color: white;
+  }
+}
+
+.home--contents-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 4em; /* Adjust font size for larger screens */
+  }
+
+  h3 {
+    font-size: 2em; /* Adjust font size for larger screens */
+  }
 }
