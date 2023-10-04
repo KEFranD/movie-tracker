@@ -21,15 +21,16 @@ h3 {
 .home-contents {
   padding: 1.5em;
   // margin-bottom: 3.5em;
-  height: 600px;
+  height: 605px;
 
   h1, h3 {
-    font-family: 'Lilita One', cursive;
+    font-family: 'Poppins', sans-serif;
     color: rgb(40, 40, 40);
+    font-weight: bolder;
   }
 
   h1 {
-    font-size: 4.0em;
+    font-size: 3.5em;
   }
 
   h3 {
@@ -55,8 +56,8 @@ span.movie {
   display: inline-block;
   font-size: 1em;
   border-radius: 2em;
-  font-weight: 500;
-  font-family: 'Lilita One', cursive;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
   margin-top: -3.5em;
   margin-left: 1em;
 

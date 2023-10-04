@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: #8D99AE;
+  font-family: 'Poppins', sans-serif;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -22,8 +23,13 @@
 
 .navbar-lewagon .nav-link {
   font-size: 20px;
+  font-weight: 600;
 }
 
 .avatar {
   width: 50px;
+}
+
+.navbar-nav .nav-item {
+  padding-right: 3rem;
 }
