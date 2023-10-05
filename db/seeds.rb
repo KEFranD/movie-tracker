@@ -9,8 +9,6 @@ require 'rest-client'
 require 'json'
 
 Movie.destroy_all
-Bookmark.destroy_all
-List.destroy_all
 
 puts 'Getting Movies Data'
 
@@ -26,13 +24,16 @@ def movies_dataset
 
     if movies_data.present?
       movies_data.first(10).each do |movie|
+        poster_url = "https://image.tmdb.org/t/p/original/#{movie['poster_path']}" if movie['poster_path'].present?
+
         Movie.create(
           name: movie['title'],
           description: movie['overview'],
-          poster_url: movie['poster_path'],
+          poster_url: poster_url,
           rating: movie['vote_average']
         )
-        puts "Seeding Movie Data: #{movie['title']}"
+
+        puts "Seeding Movie Data: #{movie['title']} - Poster URL: #{poster_url}"
       end
     else
       puts 'No movie data found in the API response'
