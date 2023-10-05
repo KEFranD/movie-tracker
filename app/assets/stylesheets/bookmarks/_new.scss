@@ -1,0 +1,39 @@
+.bookmark--title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 12px;
+
+  span {
+    color: #D90429;
+  }
+}
+
+.bookmark--form {
+  margin: 0px 250px;
+  margin-bottom: 400px;
+}
+
+.bookmark-btn {
+  display: inline-block;
+  padding: 7px 14px 7px 14px;
+  border-radius: 8px;
+  background-color: #EF233C;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  border: none;
+  font-weight: bold;
+
+  &:hover {
+    background-color: #ffb1b1;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
