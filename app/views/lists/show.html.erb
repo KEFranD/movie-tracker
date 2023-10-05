@@ -1,24 +1,34 @@
-<h1>Your <%=@list.name %> Movies List</h1>
+<div class="show--header">
+  <h1>Your <span><%=@list.name %></span> Movies List</h1>
 
-<%= link_to "Delete",
-  list_path(@list),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
-
-<h3>Movies:</h3>
-<ul class="list-group">
-  <% @list.movies.each do |movie| %>
-  <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
-    <%= image_tag movie.poster_url, class: "movie-img rounded-top"%>
-    <li class="list-group-item"><%= movie.name %></li>
-    <li class="list-group-item"><%= movie.description %></li>
-    <li class="list-group-item"><%= movie.rating %></li>
-    <p><strong>Note:</strong></p>
-    <li class="list-group-item"><%= bookmark.note %></li>
-    <%= link_to "Delete Movie",
-        list_bookmark_path(@list, bookmark),
-        data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{movie.name} from #{@list.name} list?"}
+  <button class="show-btn">
+    <%= link_to "Delete",
+      list_path(@list),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?",}
     %>
-  <% end %>
-</ul>
-<br>
+  </button>
+
+  <div class="show--container">
+    <% @list.movies.each do |movie| %>
+      <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+      <div class="show--contents-main">
+        <%= image_tag movie.poster_url, class: "movie-img rounded-top"%>
+        <div class="show--contents-2">
+          <h3 class="show-name"><%= movie.name %></h3>
+            <button class="show-btn-2">
+              <%= link_to "Delete Movie",
+                list_bookmark_path(@list, bookmark),
+                data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{movie.name} from #{@list.name} list?"}
+              %>
+            </button>
+        </div>
+            <div class="show--contents-3">
+              <p class="list-group-item"><%= movie.description %></p>
+              <p class="list-group-item"><%= '⭐️' * movie.rating %></p>
+              <p><strong>Note:</strong></p>
+              <p class="list-group-item"><%= bookmark.note %></p>
+            </div>
+      </div>
+    <% end %>
+  </div>
+</div>
