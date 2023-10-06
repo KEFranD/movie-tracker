@@ -2,7 +2,7 @@
   <% @lists.each do |list| %>
     <div class="list--card">
       <% if list.photo.present? %>
-        <%= link_to cl_image_tag(list.photo.key, class:"card--img"), list_path(list) %>
+        <%= link_to cl_image_tag(list.photo.key, class: "card--img gradient-bg"), list_path(list) %>
         <% else %>
         <%= link_to image_tag("photo.png", class:"card--img"), list_path(list)%>
       <% end %>

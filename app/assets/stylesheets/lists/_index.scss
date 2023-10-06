@@ -27,6 +27,7 @@
     background-position: center;
     background-repeat: no-repeat;
     // background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+
   }
 
   .list--card-content {
@@ -39,7 +40,7 @@
     text-align: center;
     color: #EDF2F4;
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+    font-weight: 700;
   }
 
   .list--card-content a {
@@ -57,5 +58,13 @@
     color: rgb(255, 255, 255);
     font-size: 15px;
     margin-left: 220px;
+
+    &:hover {
+      background-color: #96c1f2;
+    }
   }
+}
+
+.gradient-bg {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
 }
