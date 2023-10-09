@@ -1,0 +1,47 @@
+.container--custom {
+  margin: 0px 250px;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .container--custom {
+    margin: 0 20px;
+    margin-bottom: 25px;
+  }
+}
+
+
+.form-actions .btn {
+  display: inline-block;
+  padding: 7px 14px 7px 14px;
+  border-radius: 8px;
+  background-color: #EF233C;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+
+  &:hover {
+    background-color: #ffb1b1;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.devise-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 12px;
+
+  span {
+    color: #EF233C;
+  }
+}
+
+.devise-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  margin-top: 12px;
+}
