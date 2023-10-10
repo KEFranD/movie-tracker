@@ -68,3 +68,19 @@
 .gradient-bg {
   background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
 }
+
+.index--text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  margin-top: 12px;
+  color:#2B2D42;
+
+  a {
+    color:#D90429;
+    text-decoration: none;
+
+    &:hover {
+      color: #ffb1b1;
+    }
+  }
+}
